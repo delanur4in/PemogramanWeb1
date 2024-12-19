@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Seminar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Registrasi Seminar / Workshop</h5>
+            </div>
+            <div class="card-body">
+        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <div class="mb-3">
+                <label class="form-label" for="namaLengkap">Nama Lengkap</label>
+                <input class="form-control" id="namaLengkap" type="text" placeholder="Masukan Nama Lengkap" data-sb-validations="" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="tempatLahir">Tempat Lahir</label>
+                <input class="form-control" id="tempatLahir" type="text" placeholder="Masukan Tempat Lahir" data-sb-validations="" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="tanggalLahir">Tanggal Lahir</label>
+                <input type="date" class="form-control" id="tanggalLahir" type="text" placeholder="Masukan Tanggal Lahir" data-sb-validations="" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label d-block">Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" id="lakiLaki" type="radio" name="gender" data-sb-validations="" />
+                    <label class="form-check-label" for="lakiLaki">Laki-laki</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" id="perempuan" type="radio" name="gender" data-sb-validations="" />
+                    <label class="form-check-label" for="perempuan">Perempuan</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control" id="email" type="text" placeholder="Masukan Email" data-sb-validations="" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="statusPeserta">Status Peserta</label>
+                <select class="form-select" id="statusPeserta" aria-label="Status Peserta">
+                    <option selected disabled>Select</option>
+                    <option value="Dosen">Dosen</option>
+                    <option value="Mahasiswa">Mahasiswa</option>
+                    <option value="Umum">Umum</option>
+                </select>
+            </div>
+            <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                    <p>To activate this form, sign up at</p>
+                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                </div>
+            </div>
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
+            <div class="d-grid">
+                <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
